@@ -1,0 +1,47 @@
+
+#AWS
+aws_region       = "eu-west-3"     # Paris
+map_migrated_tag = "true"
+environment      = "onprem-pra"
+project_name     = "infra-pra-demo"
+
+#VPC & Subnets 
+main_vpc_name                   = "main-vpc"
+company_name                   = "demo"
+private_az1_subnet_name        = "private-az1"
+private_az2_subnet_name        = "private-az2"
+private_az3_subnet_name        = "private-az3"
+second_private_az1_subnet_name = "private-az1-bis"
+
+public_az1_subnet_name         = "public-az1"
+public_az2_subnet_name         = "public-az2"
+public_az3_subnet_name         = "public-az3"
+public_az_wildcard_subnet_name = "public-*"
+
+#IAM / Instance Profile
+iam_instance_profile_name = "basic-instance-profile"
+
+#Security Groups
+global_sg_name        = "global-sg"
+global_app_sg_name    = "global-app-sg"
+
+#DNS / Route 53
+route53_zone_name = "exemple.com"
+domain            = "exemple.com"
+
+#EC2 Instances (HAProxy)
+ec2_instance_haproxy_name    = "haproxy-instance-1"
+ec2_instance_haproxy_2_name  = "haproxy-instance-2"
+
+#NLB
+nlb_name         = "nlb-onprem-pra"
+nlb_sg_name      = "nlb-pra-sg"
+
+eip_nlb_onprem1_name = "eip-nlb-az1"
+eip_nlb_onprem2_name = "eip-nlb-az2"
+eip_nlb_onprem3_name = "eip-nlb-az3"
+
+#Listener / Target Group
+listener_port             = 33890                       # Port RDP personnalisé
+ingress_rule_description  = "Accès RDP client (PRA)"
+target_group_name         = "tg-srvtsexxx"
